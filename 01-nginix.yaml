@@ -1,6 +1,7 @@
 - name: Install nginx and start the service
   hosts: frontend
   tasks:
+  become: true
     - name: Install nginx
       ansible.builtin.package:
         name: nginx
